@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print step
-        run: echo "HEllo World"
+        run: |
+          echo "Hello World"
+          uptime
+          whoami
