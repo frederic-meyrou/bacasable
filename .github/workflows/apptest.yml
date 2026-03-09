@@ -6,11 +6,15 @@ jobs:
     steps:
         - name: CheckOut Code
           uses: actions/checkout@v6
-        - name : Install Node V18
+        - name : Install Node
           uses: actions/setup-node@v6
           with:
             node-version: 24
         - name: Install
-          run: npm install
+          run: |
+            cd app-react
+            npm install
         - name: Unit Tests
-          run: npm run test
+          run: |
+            cd app-react
+            npm run test
