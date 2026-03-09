@@ -1,0 +1,16 @@
+name: App react test
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on:ubuntu-latest
+    steps:
+        - name: CheckOut Code
+          uses: actions/checkout@v3
+        - name : Install Node V18
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Install
+          run: npm install
+        - name: Unit Tests
+          run: npm run test
